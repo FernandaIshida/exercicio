@@ -21,6 +21,7 @@ body {
 
 .apresentacao__login {
     background-color: whitesmoke;
+    margin: auto;
     display: flex;
     justify-content: center;
     width: 15%; 
@@ -53,9 +54,10 @@ body {
 
 .apresentacao__login__botao {
     background-color: var(--cor-botao);
+    color: whitesmoke;
     display: block;
     margin: 0 auto; 
-    padding: 8px;
+    padding: 8px 34%;
     border-radius: 4px;
     gap: 30px;
 }
