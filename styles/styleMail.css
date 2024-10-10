@@ -44,13 +44,15 @@ body {
     font-weight: 40;
     color: var(--cor-quaternaria);
     padding: 0.80rem;
-
 }
 
 .email {
-    padding: 20% 20%;
+    padding: 7% 10%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     position: row;
+    margin: auto;
     width: 80%;
 }
 
@@ -61,10 +63,11 @@ body {
     font-size: 0.7rem;
     font-weight: 400;
     color: var(--cor-secundaria);
-
 }
+
 .email__acoes {
     display: flex;
+    justify-content: flex-end;
     align-items: end;
     position: row;
     width: 50%;
