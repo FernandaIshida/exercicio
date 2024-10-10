@@ -4,6 +4,7 @@
     --cor-primaria: #55D8CA;
     --cor-secundaria: #19B2AC;
     --cor-terciaria: #D50000;
+    --cor-quaternaria: #f5f5f5;
     --cor-botao: #6F53E9;
 
     --font-primaria: "Lato", sans-serif;
@@ -17,57 +18,64 @@ body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
+    display: flex;
+    min-height: 100vh;
+    overflow: auto;
 }
 
-.apresentacao__login {
-    background-color: whitesmoke;
+.login {
+    background-color: var(--cor-quaternaria);
     margin: auto;
     display: flex;
+    align-items: center;
     justify-content: center;
-    width: 15%; 
+    width: 15%;
     text-align: center;
     border-radius: 3px;
-    font-size: 1.5rem;
     font-weight: 600;
-    padding: 21.5px 0px;
+    padding: 21.5008px 0px;
     text-decoration: none;
     color: var(--cor-secundaria);
     font-family: var(--font-primaria);
+    
 }
 
-.apresentacao__imagem {
+.login__imagem {
     display: flex;
     margin: 0 auto;
-    gap: 30px;
+    padding: 15px;
 }
 
-.apresentacao__input {
+.login__input {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    margin: 15px auto;
     text-align: left;
     padding: 8px;
-    border-radius: 4px;
-    gap: 30px;
+    border-radius: 4px; 
 }
 
-.apresentacao__login__botao {
+.login__botao {
+    /*como deixar tamanho igual aos imputs de forma mais dinamica?*/
     background-color: var(--cor-botao);
-    color: whitesmoke;
+    color: var(--cor-quaternaria);
     display: block;
     margin: 0 auto; 
     padding: 8px 34%;
     border-radius: 4px;
-    gap: 30px;
 }
 
 .rodape {
-        padding: 24px;
-        color: var(--cor-secundaria);
-        background-color: var(--cor-primaria);
-        text-align: center;
-        font-family: var(--font-primaria);
-        font-size: 0.5rem;
-        font-weight: 400;
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    padding: 24px;
+    color: var(--cor-secundaria);
+    background-color: var(--cor-primaria);
+    text-align: center;
+    font-family: var(--font-primaria);
+    font-size: 0.5rem;
+    font-weight: 400;
 }

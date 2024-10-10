@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>  
-    </header>
-    <main class="apresentacao__login">
+    <main class="login">
         <div>
-            <img class="apresentacao__imagem" src="./assets/lock.png" alt="Icone de cadeado">
-            <input class="apresentacao__input" type="text" placeholder="Nome">
-            <input class="apresentacao__input" type="password" placeholder="Senha">
-            <button class="apresentacao__login__botao">ENTRAR</button>  
+            <img class="login__imagem" src="./assets/lock.png" alt="Icone de cadeado">
+            <input class="login__input" type="text" placeholder="Nome">
+            <input class="login__input" type="password" placeholder="Senha">
+            <button id="loginButton" class="login__botao">ENTRAR</button>
+                <script type="text/javascript">
+                    document.getElementById("loginButton").onclick = function() {
+                    location.href = "email.html";
+                    }
+                </script>
+            
         </div>           
     </main>
     <footer class="rodape">
