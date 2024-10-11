@@ -6,6 +6,7 @@
     --cor-terciaria: #D50000;
     --cor-quaternaria: #f5f5f5;
     --cor-botao: #6F53E9;
+    --cor-hover: #f3edaa;
 
     --font-primaria: "Lato", sans-serif;
 } 
@@ -25,7 +26,9 @@ body {
 
 .cabecalho {
     background-color: var(--cor-secundaria);
-    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     height: 6.0rem;
     width: 100%;
 }
@@ -47,26 +50,26 @@ body {
 }
 
 .email {
-    padding: 7% 10%;
+    padding: 2% 10%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: row;
     margin: auto;
-    width: 60%;
+    width: 80%;
+    gap: 1.875rem;
 }
 
 .email__menu {
     display: flex;
-    position: row;
-    width: 50%;
+    justify-content: space-between;
+    width: 100%;
 
 }
 
 .email__titulo {
     display: flex;
     align-items: flex-start;
-    
     font-size: 0.7rem;
     font-weight: 400;
     color: var(--cor-secundaria);
@@ -76,8 +79,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: end;
-    position: row;
-    
+    position: row;    
     font-size: .3125rem;
     font-weight: 400;
     color: var(--cor-botao);
@@ -109,7 +111,7 @@ body {
 }
 
 #email tr:hover {
-    background-color: #f3edaa;
+    background-color: var(--cor-hover);
 }
 
 #email th {
