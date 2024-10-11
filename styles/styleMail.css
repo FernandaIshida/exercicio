@@ -53,13 +53,20 @@ body {
     align-items: center;
     position: row;
     margin: auto;
-    width: 80%;
+    width: 60%;
+}
+
+.email__menu {
+    display: flex;
+    position: row;
+    width: 50%;
+
 }
 
 .email__titulo {
     display: flex;
     align-items: flex-start;
-    width: 50%;
+    
     font-size: 0.7rem;
     font-weight: 400;
     color: var(--cor-secundaria);
@@ -70,9 +77,46 @@ body {
     justify-content: flex-end;
     align-items: end;
     position: row;
-    width: 50%;
-    font-size: 0.7rem;
+    
+    font-size: .3125rem;
     font-weight: 400;
-    color: var(--cor-botao);   
+    color: var(--cor-botao);
+    font-size: .625rem;
+    gap: .625rem;
 }
 
+.email__acoes__icone__soma {
+    width: 1.125rem;
+}
+
+.email__acoes__icone__lixeira {
+    width: 1.375rem
+}
+
+.email__table {
+    width: 100%;
+    border-collapse: collapse;
+    font: var(--font-primaria);
+}
+
+#email td, #email th {
+    border: 1px solid var(--cor-quaternaria);
+    padding: 8px;
+}
+
+#email tr:nth-child(even){
+    background-color: var(--cor-quaternaria);
+}
+
+#email tr:hover {
+    background-color: #f3edaa;
+}
+
+#email th {
+    width: 100%; 
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-quaternaria);
+}
