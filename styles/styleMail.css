@@ -97,12 +97,21 @@ body {
 .email__table {
     width: 100%;
     border-collapse: collapse;
-    font: var(--font-primaria);
+    font: var(--font-primaria);    
+}
+
+.primeira__celula {
+    max-width: 5%;
+}
+
+.segunda__celula {
+    width: auto;
+    table-layout: auto;
 }
 
 #email td, #email th {
     border: 1px solid var(--cor-quaternaria);
-    padding: 8px;
+    padding: 10px;
 }
 
 #email tr:nth-child(even){
@@ -114,7 +123,7 @@ body {
 }
 
 #email th {
-    width: 100%; 
+    width: 100%;
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
