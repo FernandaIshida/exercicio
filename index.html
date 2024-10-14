@@ -11,20 +11,28 @@
     <main class="login">
         <div>
             <img class="login__imagem" src="./assets/lock.png" alt="Icone de cadeado">
-            <input class="login__input" type="text" placeholder="Nome">
-            <input class="login__input" type="password" placeholder="Senha">
-            <button id="loginButton" class="login__botao">ENTRAR</button>
-                <script type="text/javascript">
-                    document.getElementById("loginButton").onclick = function() {
-                    location.href = "email.html";
-                    }
-                </script>
-            
-        </div>           
+            <input class="login__input" id="login" type="text" placeholder="Nome">
+            <input class="login__input" id="senha" type="password" placeholder="Senha">
+            <button id="loginButton" class="login__botao" onclick="logar();return false">ENTRAR</button>
+       </div>    
+                      
     </main>
     <footer class="rodape">
         <p>Desenvolvido por Fernanda Ishida</p>
-    </footer>   
+    </footer>
+    <script type="text/javascript">
+        function logar() {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+            
+            if(login == "admin" && senha == "admin") {
+                alert('Sucesso na conexão');
+                location.href = "email.html";
+            }else{
+                alert('Usuário ou senha incorretos');
+            }
+        }
+    </script> 
 </body>
 </html>
 

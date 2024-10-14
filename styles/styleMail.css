@@ -90,9 +90,22 @@ body {
     width: 1.125rem;
 }
 
-.email__acoes__icone__lixeira {
-    width: 1.375rem
-}
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+  }
+
+  .delete-btn i {
+    margin-right: 5px;
+  }
+
+  .delete-container {
+    margin-bottom: 10px; /* Espaço entre o botão e a tabela */
+  }
+
 
 .email__table {
     width: 100%;
@@ -133,4 +146,13 @@ body {
 
 #email td {
     color: #343232;
+}
+
+input{
+    width: 15px;
+    height: 15px;
+  }
+
+input:checked ~ .checkmark{
+    background-color: var(--cor-secundaria);
 }
