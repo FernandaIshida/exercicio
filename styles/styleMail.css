@@ -42,11 +42,10 @@ body {
     position: row;
     justify-content: flex-start;
     align-items: center;
-    font: var(--font-primaria);
     font-size: 0.75rem;
     font-weight: 40;
     color: var(--cor-quaternaria);
-    padding: 0.80rem;
+    padding: 1rem;
 }
 
 .email {

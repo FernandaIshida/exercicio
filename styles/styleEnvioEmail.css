@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --cor-primaria: #55D8CA;
+    --cor-secundaria: #19B2AC;
+    --cor-terciaria: #D50000;
+    --cor-quaternaria: #f5f5f5;
+    --cor-botao: #6F53E9;
+    --cor-hover: #f3edaa;
+
+    --font-primaria: "Lato", sans-serif;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primaria);
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-quaternaria);
+  }
+
+  .cabecalho {
+    background-color: var(--cor-secundaria);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 6.0rem;
+    width: 100%;
+    color: var(--cor-quaternaria);
+    position: fixed;
+    top: 0;
+}
+
+.cabecalho__icone {
+    padding: 0.93rem 0.93rem 0.93rem;
+}
+
+.cabecalho__conteudo {
+    display: flex;
+    position: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 40;
+    color: var(--cor-quaternaria);
+    padding: 0.80rem;
+}
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .container {
+    margin-top: 10px;
+    padding: 2% 5%;
+    width: 80%;
+    height: 80%;
+    border-radius: 15px;
+    background: white;
+    
+  }
+  
+  .header {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto 12px;
+  }
+  
+  .header span {
+    font-weight: 900;
+    font-size: 20px;
+    word-break: break-all;
+    color: var(--cor-secundaria);
+  }
+  
+  #new {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: var(--cor-botao);
+  }
+  
+  .divTable {
+    padding: 10px;
+    width: auto; 
+    height:inherit; 
+    overflow:auto;
+  }
+  
+  .divTable::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--cor-quaternaria); 
+  }
+  
+  .divTable::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--cor-quaternaria); 
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 10px;
+    word-break: break-all;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: var(--cor-primaria);
+    color: var(--cor-quaternaria);
+  }
+  
+  tr {
+    border-bottom: 1px solid var(--cor-quaternaria) !important;
+  }
+  
+  tbody tr td {
+    vertical-align: text-top;
+    padding: 6px;
+    max-width: 50px;
+  }
+  
+  thead tr th {
+    padding: 5px;
+    text-align: start;
+    margin-bottom: 50px;
+  }
+  
+  tbody tr {
+    margin-bottom: 50px;
+  }
+  
+  thead tr th.acao {
+    width: 100px!important;
+    text-align: center;
+  }
+  
+  tbody tr td.acao {
+    text-align: center;
+  }
+  
+  @media (max-width: 700px) {
+    body {
+      font-size: 10px;
+    }
+    
+    .header span {
+      font-size: 15px;
+    }
+  
+    #new {
+      padding: 5px;
+      font-size: 10px;
+    }
+  
+    thead tr th.acao {
+      width: auto!important;
+    }
+    
+    td button i {
+      font-size: 20px!important;
+    }
+  
+    td button i:first-child {
+      margin-right: 0;
+    }
+  
+    .modal {
+      width: 90%!important;
+    }
+  
+    .modal label {
+      font-size: 12px!important;
+    }
+  }
+  
+  .modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--cor-quaternaria);
+    color: #19B2AC;
+    border-radius: 10px;
+    width: 50%;
+  }
+  
+  .modal label {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .modal input {
+    width: 100%;
+    outline: none;
+    padding: 5px 10px; 
+    width: 100%;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .modal button {
+    width: 100%;
+    margin: 10px auto;
+    outline: none;
+    border-radius: 20px; 
+    padding: 5px 10px; 
+    width: 100%;
+    border: none;
+    background-color: var(--cor-botao);
+    color: var(--cor-quaternaria);
+  }
+  
+  .active {
+    display: flex;
+  }
+  
+  .active .modal {
+    animation: modal .4s;
+  }
+  
+  @keyframes modal {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -60px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  td button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  td button i {
+    font-size: 25px;
+  }
+  
+  td button i:first-child {
+    margin-right: 10px;
+  }
