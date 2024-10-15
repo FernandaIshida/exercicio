@@ -1,11 +1,11 @@
-// Função para carregar o arquivo JSON e preencher a tabela
+// Função para carregar o arquivo JSON e alimentar a tabela
 function carregarDados() {
     // Usa a função fetch para buscar o arquivo JSON
     fetch('dados.json')
         .then(response => response.json())  // Converte a resposta para JSON
         .then(data => {
             const tableBody = document.querySelector("tbody");  // Seleciona o corpo da tabela
-            //revisar conteúdo
+            //Revisar conteúdo
             data.forEach((item, index) => {
             // Cria uma nova linha na tabela
             const row = document.createElement("tr");
@@ -35,21 +35,27 @@ function carregarDados() {
             tableBody.appendChild(row);
         });
       })
-      .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
+      .catch(error => console.error('Erro ao carregar o arquivo JSON:', error)); // para controle
   }
 
 function deletarSelecionados() {
     // Seleciona todos os checkboxes dentro do corpo da tabela
-    const checkboxes = document.querySelectorAll("#mailbox tbody input[type='checkbox']:checked");
+  const checkboxes = document.querySelectorAll("#mailbox tbody input[type='checkbox']:checked");
+    //Deleta linha selecionada
+  checkboxes.forEach(checkbox => {
+    const row = checkbox.closest("tr");
+    row.remove();
+  });
+}
+
+function escrever() {
+  location.href = "envioemail.html";
+}
+
+
+
   
-    // Remove as linhas cujos checkboxes estão marcados
-    checkboxes.forEach(checkbox => {
-      const row = checkbox.closest("tr");  // Encontra a linha associada ao checkbox
-      row.remove();  // Remove a linha
-    });
-  }
-  
-// Chama a função para carregar os dados quando a página é carregada
+// Chama a função para carregar dados quando a página é atualizada
 window.onload = carregarDados;
 
 document.getElementById("deleteSelected").addEventListener("click", deletarSelecionados);

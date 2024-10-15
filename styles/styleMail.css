@@ -90,21 +90,25 @@ body {
     width: 1.125rem;
 }
 
-.delete-btn {
+.insere-btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
-    color: red;
-    font-size: 18px;
-  }
+    color: var(--cor-botao);
+    font-size: .625rem;
+    margin-bottom: 8px;
+}
 
-  .delete-btn i {
+.delete-btn {
+    background-color: transparent;
+    border: none;
     margin-right: 5px;
-  }
+    cursor: pointer;
+}
 
-  .delete-container {
-    margin-bottom: 10px; /* Espaço entre o botão e a tabela */
-  }
+.delete-container {
+    margin-bottom: 3px; /* Espaço entre o botão e a tabela */
+}
 
 
 .email__table {
